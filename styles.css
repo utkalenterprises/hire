@@ -1,24 +1,82 @@
-# frozen_string_literal: true
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+}
 
-Gem::Specification.new do |s|
-  s.name          = "jekyll-theme-minimal"
-  s.version       = "0.2.0"
-  s.license       = "CC0-1.0"
-  s.authors       = ["Steve Smith", "GitHub, Inc."]
-  s.email         = ["opensource+jekyll-theme-minimal@github.com"]
-  s.homepage      = "https://github.com/pages-themes/minimal"
-  s.summary       = "Minimal is a Jekyll theme for GitHub Pages"
+header {
+    background-color: #343a40;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
 
-  s.files         = `git ls-files -z`.split("\x0").select do |f|
-    f.match(%r{^((_includes|_layouts|_sass|assets)/|(LICENSE|README)((\.(txt|md|markdown)|$)))}i)
-  end
+section {
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    max-width: 600px;
+}
 
-  s.required_ruby_version = ">= 2.4.0"
+h2 {
+    margin-top: 0;
+    font-size: 24px;
+}
 
-  s.platform = Gem::Platform::RUBY
-  s.add_runtime_dependency "jekyll", "> 3.5", "< 5.0"
-  s.add_runtime_dependency "jekyll-seo-tag", "~> 2.0"
-  s.add_development_dependency "html-proofer", "~> 3.0"
-  s.add_development_dependency "rubocop-github", "~> 0.16"
-  s.add_development_dependency "w3c_validators", "~> 1.3"
-end
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+form {
+    margin-top: 20px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="number"],
+select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+button[type="submit"] {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+footer {
+    text-align: center;
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #343a40;
+    color: #fff;
+    border-radius: 5px;
+}

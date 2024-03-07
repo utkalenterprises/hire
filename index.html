@@ -3,35 +3,63 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Company Name</title>
+    <title>Careers at Utkal Enterprises</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
-        <h1>Welcome to Utkal Enterprises</h1>
-        <nav>
-            <ul>
-                <li><a href="#about">About</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
+        <h1>Careers at Utkal Enterprises</h1>
     </header>
-    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfs6-5-Unx--OPFjOubS6t0yl0r1GyBfNwD_IJed3Wde1kxzA/viewform?embedded=true" width="640" height="2513" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
-    <section id="about">
-        <h2>About Us</h2>
-        <p>Insert information about your company here.</p>
+    <section>
+        <h2>Current Openings</h2>
+        <p>We are currently hiring for the following positions:</p>
+        <ul>
+            <li>Sales Executive</li>
+            <li>Delivery Associates</li>
+            <li>Team Leader</li>
+        </ul>
+        <h2>Apply Now</h2>
+        <form id="careerForm" action="mailto:hr@utkalb2b.in" method="post" enctype="text/plain">
+            <label for="position">Position:</label><br>
+            <select id="position" name="position" required>
+                <option value="">Select Position</option>
+                <option value="Sales Executive">Sales Executive</option>
+                <option value="Delivery Associate">Delivery Associate</option>
+                <option value="Team Leader">Team Leader</option>
+            </select><br><br>
+
+            <label for="fullName">Full Name:</label><br>
+            <input type="text" id="fullName" name="fullName" required><br><br>
+
+            <label for="age">Age:</label><br>
+            <input type="number" id="age" name="age" required><br><br>
+
+            <label for="sex">Sex:</label><br>
+            <select id="sex" name="sex" required>
+                <option value="">Select Gender</option>
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+                <option value="Other">Other</option>
+            </select><br><br>
+
+            <label for="mobile">Mobile Number:</label><br>
+            <input type="tel" id="mobile" name="mobile" pattern="[0-9]{10}" required><br><br>
+
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email" required><br><br>
+
+            <label for="experience">Experience:</label><br>
+            <input type="number" id="experience" name="experience" required><br><br>
+
+            <label for="resume">Upload Resume:</label><br>
+            <input type="file" id="resume" name="resume" accept=".pdf,.doc,.docx" required><br><br>
+
+            <input type="submit" value="Submit">
+        </form>
     </section>
-    <section id="services">
-        <h2>Our Services</h2>
-        <p>Insert information about your services here.</p>
-    </section>
-    <section id="contact">
-        <h2>Contact Us</h2>
-        <p>Insert contact information here.</p>
-    </section>
+
     <footer>
-        <p>&copy; 2024 utkalb2b. All rights reserved.</p>
+        <p>&copy; 2024 Utkal Enterprises. All rights reserved.</p>
     </footer>
 </body>
 </html>

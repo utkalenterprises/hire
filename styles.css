@@ -43,7 +43,7 @@ nav ul li a {
 }
 
 .hero {
-    background-image: url('utkalenterprises/hire/background.jpeg'); /* Replace 'background.jpg' with your background image */
+    background-image: url('background.jpeg'); /* Replace 'background.jpg' with your background image */
     background-size: cover;
     background-position: center;
     color: #fff;

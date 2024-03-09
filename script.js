@@ -1,7 +1,7 @@
 document.getElementById("careerForm").addEventListener("submit", function(event) {
     event.preventDefault();
     var formData = new FormData(this);
-    fetch('API_GATEWAY_ENDPOINT_URL', {
+    fetch('hr@utkalb2b.in', {
         method: 'POST',
         body: formData
     })

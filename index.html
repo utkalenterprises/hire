@@ -3,58 +3,59 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Utkal Enterprises</title>
+    <title>Your Company Name - Home</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
+<!-- Include the header -->
+<!-- If using server-side includes -->
+<!-- #include virtual="header.html" -->
 
-<header>
+<!-- If not using server-side includes, copy the contents of header.html here -->
+<header class="header">
     <div class="container">
-        <img src="logo.png" alt="Company Logo">
-        <nav>
-            <ul>
-                <li><a href="#about">About Us</a></li>
-                <li><a href="#privacy">Privacy Policy</a></li>
-                <li><a href="#terms">Terms and Conditions</a></li>
-                <!-- Add more navigation items as needed -->
+        <div class="logo">
+            <a href="index.html">
+                <img src="logo.png" alt="Company Logo">
+            </a>
+        </div>
+        <nav class="navbar">
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="privacy.html">Privacy Policy</a></li>
+                <li><a href="terms.html">Terms and Conditions</a></li>
             </ul>
         </nav>
     </div>
 </header>
 
 <section id="home" class="hero">
-    <!-- Background image or video goes here -->
+    <!-- Home page content goes here -->
     <div class="container">
-        <h1>Welcome to Utkal B2B</h1>
-        <p>Your Partner In Groth</p>
+        <h1>Welcome to Your Company</h1>
+        <p>Your company tagline or description goes here.</p>
     </div>
 </section>
 
-<section id="about" class="about">
-    <div class="container">
-        <h2>About Us</h2>
-        <p>Your company's story or mission statement goes here.</p>
-    </div>
-</section>
+<!-- Include the footer -->
+<!-- If using server-side includes -->
+<!-- #include virtual="footer.html" -->
 
-<section id="privacy" class="privacy">
+<!-- If not using server-side includes, copy the contents of footer.html here -->
+<footer class="footer">
     <div class="container">
-        <h2>Privacy Policy</h2>
-        <p>Your privacy policy content goes here.</p>
-    </div>
-</section>
-
-<section id="terms" class="terms">
-    <div class="container">
-        <h2>Terms and Conditions</h2>
-        <p>Your terms and conditions content goes here.</p>
-    </div>
-</section>
-
-<footer>
-    <div class="container">
-        <p>&copy; 2024 Utkalenterprises. All rights reserved.</p>
+        <div class="footer-links">
+            <ul>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="privacy.html">Privacy Policy</a></li>
+                <li><a href="terms.html">Terms and Conditions</a></li>
+            </ul>
+        </div>
+        <div class="footer-info">
+            <p>&copy; 2024 Your Company. All rights reserved.</p>
+        </div>
     </div>
 </footer>
 

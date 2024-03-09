@@ -1,35 +1,32 @@
-const AWS = require('aws-sdk');
-const ses = new AWS.SES();
-
-exports.handler = async (event) => {
-    const formData = event.body;
-    const emailParams = {
-        Destination: {
-            ToAddresses: ['hr@utkalb2b.in']
-        },
-        Message: {
-            Body: {
-                Text: {
-                    Data: `New job application received:\n\n${formData}`
-                }
-            },
-            Subject: {
-                Data: 'New Job Application'
+document.addEventListener("DOMContentLoaded", function() {
+    // Smooth scrolling for navigation links
+    const navLinks = document.querySelectorAll('nav ul li a');
+    
+    navLinks.forEach(function(link) {
+        link.addEventListener('click', function(event) {
+            event.preventDefault();
+            const targetId = this.getAttribute('href').substring(1);
+            const targetElement = document.getElementById(targetId);
+            targetElement.scrollIntoView({ behavior: 'smooth' });
+        });
+    });
+    
+    // Fade-in effect for sections
+    const sections = document.querySelectorAll('section');
+    
+    function checkVisibility() {
+        sections.forEach(function(section) {
+            const sectionTop = section.getBoundingClientRect().top;
+            const windowHeight = window.innerHeight;
+            
+            if (sectionTop < windowHeight) {
+                section.classList.add('visible');
+            } else {
+                section.classList.remove('visible');
             }
-        },
-        Source: 'noreply@yourdomain.com'
-    };
-    try {
-        const data = await ses.sendEmail(emailParams).promise();
-        return {
-            statusCode: 200,
-            body: 'Your application has been submitted successfully.'
-        };
-    } catch (err) {
-        console.error('Error sending email:', err);
-        return {
-            statusCode: 500,
-            body: 'Failed to submit your application. Please try again later.'
-        };
+        });
     }
-};
+    
+    window.addEventListener('scroll', checkVisibility);
+    checkVisibility();
+});

@@ -1,20 +1,35 @@
-document.getElementById("careerForm").addEventListener("submit", function(event) {
-    event.preventDefault();
-    var formData = new FormData(this);
-    fetch('hr@utkalb2b.in', {
-        method: 'POST',
-        body: formData
-    })
-    .then(response => {
-        if (!response.ok) {
-            throw new Error('Network response was not ok');
-        }
-        return response.text();
-    })
-    .then(data => {
-        alert(data);
-    })
-    .catch(error => {
-        console.error('There was a problem with the fetch operation:', error);
-    });
-});
+const AWS = require('aws-sdk');
+const ses = new AWS.SES();
+
+exports.handler = async (event) => {
+    const formData = event.body;
+    const emailParams = {
+        Destination: {
+            ToAddresses: ['hr@utkalb2b.in']
+        },
+        Message: {
+            Body: {
+                Text: {
+                    Data: `New job application received:\n\n${formData}`
+                }
+            },
+            Subject: {
+                Data: 'New Job Application'
+            }
+        },
+        Source: 'noreply@yourdomain.com'
+    };
+    try {
+        const data = await ses.sendEmail(emailParams).promise();
+        return {
+            statusCode: 200,
+            body: 'Your application has been submitted successfully.'
+        };
+    } catch (err) {
+        console.error('Error sending email:', err);
+        return {
+            statusCode: 500,
+            body: 'Failed to submit your application. Please try again later.'
+        };
+    }
+};

@@ -38,7 +38,7 @@ nav ul li {
 }
 
 nav ul li a {
-    color: #f70202;
+    color: #ffffff;
     text-decoration: none;
 }
 
@@ -46,7 +46,7 @@ nav ul li a {
     background-image: url('background.jpeg'); /* Replace 'background.jpg' with your background image */
     background-size: cover;
     background-position: center;
-    color: #fd030380;
+    color: #ffffff;
     text-align: center;
     padding: 100px 0;
 }
